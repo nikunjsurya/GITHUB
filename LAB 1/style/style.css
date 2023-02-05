@@ -1,4 +1,74 @@
-.fa-hippo {
-    font-size: 250px;
+body {
+    background-image: url(../images/background.jpg);
+    text-decoration-color: white;
 }
 
+.navbar-inner {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+.products-container {
+    inline-size: min-content;
+}
+
+#imageParaOne {
+    text-align: left;
+    position: absolute;
+    bottom: 38%;
+    overflow-wrap: break-word;
+}
+
+#imageParaTwo {
+    text-align: left;
+    position: absolute;
+    bottom: 0%;
+    overflow-wrap: break-word;
+}
+
+#imageParaThree {
+    text-align: left;
+    position: absolute;
+    bottom: -45%;
+    overflow-wrap: break-word;
+}
+
+#tvShowThree {
+    width: 500px;
+    padding-left: auto;
+    margin-top: 10px;
+}
+
+#tvShowOne {
+    width: 500px;
+    padding-left: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#tvShowTwo {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 55px;
+}
+
+#nick {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+
+}
