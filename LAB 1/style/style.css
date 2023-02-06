@@ -9,6 +9,11 @@ body {
 
 }
 
+.navbar-footer {
+    background-image: url(../images/background.jpg);
+    text-align: center;
+}
+
 h1 {
     color: white;
     text-align: center;
@@ -19,6 +24,7 @@ p {
     text-align: center;
     width: 90%;
 }
+
 .products-container {
     inline-size: min-content;
 }
@@ -41,6 +47,27 @@ p {
     text-align: left;
     position: absolute;
     bottom: -45%;
+    overflow-wrap: break-word;
+}
+
+#servicesParaOne {
+    text-align: left;
+    position: absolute;
+    bottom: 35%;
+    overflow-wrap: break-word;
+}
+
+#servicesParaTwo {
+    text-align: left;
+    position: absolute;
+    bottom: -15%;
+    overflow-wrap: break-word;
+}
+
+#servicesParaThree {
+    text-align: left;
+    position: absolute;
+    bottom: -68%;
     overflow-wrap: break-word;
 }
 
@@ -71,4 +98,9 @@ p {
     margin-right: auto;
     width: 25%;
 
+}
+
+.services {
+    text-align: center;
+    display: block;
 }

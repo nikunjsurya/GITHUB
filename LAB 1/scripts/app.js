@@ -3,29 +3,6 @@
  * Date:        05/02/2023
  * Student Id:  100801799
  */
-/**
- * This is the fucntion to redirect the user to the index.html page or called home after three seconds
- * while printing the data to the console.
- * @param {} e 120,
- */
-function timedRedirect(e) {
-    e.preventDefault();
-
-    e.stopPropagation();
-
-    let contactEmail = document.getElementById('exampleInputEmail1').value;
-
-    let contactPassword = document.getElementById('exampleInputPassword1').value;
-
-    console.log("Email: " + contactEmail + " Password: " + contactPassword);
-
-    setTimeout(function () {
-
-        window.location.href = "index.html";
-
-    }, 3000);
-
-}
 
 // Retreive the submit button with the element Id
 let submitButton = document.getElementById('submit-button');
@@ -35,7 +12,7 @@ if (submitButton) {
 }
 
 
-                                                    // INDEX PAGE START!
+// INDEX PAGE START!
 
 // Get the  index page of our website.
 let indexPage;
@@ -69,11 +46,11 @@ if (location.href == "http://127.0.0.1:5500/index.html") {
 }
 
 
-                                                    // INDEX PAGE END!
+// INDEX PAGE END!
 
 // --------------------------------------------------------------------------------------------------------------------------------------
 
-                                                   // PRODUCT PAGE START!
+// PRODUCT PAGE START!
 
 // Create a variable.
 let productPage;
@@ -94,22 +71,22 @@ paragraphForImagesThree.setAttribute('id', 'imageParaThree');
 
 // Create text for the product page.
 let paragraphTextProducts = document.createTextNode('Hi there! Welcome to my interests page. I have quite a few interest in different ' +
-'genres and one of the most exciting one for me is: Gaming! I love playing games and majorly online games. I love watching animes, ' +
-'Tv Shows and movies. I also like to listen to different podcasts and my favorite topic is Spirituality! Here are a coulpe of ' + 
-' Tv Shows that I find awesome! You should definitely check these out!');
+    'genres and one of the most exciting one for me is: Gaming! I love playing games and majorly online games. I love watching animes, ' +
+    'Tv Shows and movies. I also like to listen to different podcasts and my favorite topic is Spirituality! Here are a coulpe of ' +
+    ' Tv Shows that I find awesome! You should definitely check these out!');
 
-let paragraphTextImages = document.createTextNode('Supernatural is one of my favorite TvShows from old days. ' + 
-'The supernatural genre depicts supernatural entities or events that occur in real life. Furthermore, supernatural fiction' +
- 'focuses on suspense and mystery rather than action and excitement. The occult detective fiction genre combines elements of ' +
- 'supernatural and detective fiction.');
+let paragraphTextImages = document.createTextNode('Supernatural is one of my favorite TvShows from old days. ' +
+    'The supernatural genre depicts supernatural entities or events that occur in real life. Furthermore, supernatural fiction' +
+    'focuses on suspense and mystery rather than action and excitement. The occult detective fiction genre combines elements of ' +
+    'supernatural and detective fiction.');
 
- let paragraphTextImagesTwo = document.createTextNode('Alice in borderland is another exciting TvShow that depcits an element of ' +
- 'Science fiction, Thriller, Drama, Survival, and twist. It recently launched its second season which blew my mind off. This show will'
-  + ' get you into the series with its first episode.');
+let paragraphTextImagesTwo = document.createTextNode('Alice in borderland is another exciting TvShow that depcits an element of ' +
+    'Science fiction, Thriller, Drama, Survival, and twist. It recently launched its second season which blew my mind off. This show will'
+    + ' get you into the series with its first episode.');
 
- let paragraphTextImagesThree = document.createTextNode('1899 is an amazing series produced by the creators of Dark (which BTW was an masterpiece) ' +
- 'the show will keep you in suspense till the last episode which will make you binge watch the whole season. The only sad thing is that'
- + ' after revealing the information in the last episode, the show has decided to stop continuing which really broke me a part.');
+let paragraphTextImagesThree = document.createTextNode('1899 is an amazing series produced by the creators of Dark (which BTW was an masterpiece) ' +
+    'the show will keep you in suspense till the last episode which will make you binge watch the whole season. The only sad thing is that'
+    + ' after revealing the information in the last episode, the show has decided to stop continuing which really broke me a part.');
 
 // Add the text to the product page.
 paragraphForProducts.appendChild(paragraphTextProducts);
@@ -118,7 +95,7 @@ paragraphForImagesTwo.appendChild(paragraphTextImagesTwo);
 paragraphForImagesThree.appendChild(paragraphTextImagesThree);
 
 // Ensure that the paragraph is added to this specific page.
-if(location.href == "http://127.0.0.1:5500/products.html"){
+if (location.href == "http://127.0.0.1:5500/products.html") {
     productPage = document.body.appendChild(paragraphForProducts);
     productPage = document.body.appendChild(paragraphForImages);
     productPage = document.body.appendChild(paragraphForImagesTwo);
@@ -129,5 +106,112 @@ document.getElementById("interestPage").innerHTML = "Interests";
 
 
 
-                                                   // PRODUCT PAGE END!
+// PRODUCT PAGE END!
 
+// --------------------------------------------------------------------------------------------------------------------------------------
+
+// SERVICES PAGE START!
+
+// Create a variables for the body.
+let servicesPage;
+
+// Create elements for the services page.
+let paragraphForServices = document.createElement('p');
+let paragraphForServicesImage = document.createElement('p');
+let paragraphForServicesImageTwo = document.createElement('p');
+let paragraphForServicesImageThree = document.createElement('p');
+
+
+// Set attributes
+paragraphForServicesImage.setAttribute('id', 'servicesParaOne');
+paragraphForServicesImageTwo.setAttribute('id', 'servicesParaTwo');
+paragraphForServicesImageThree.setAttribute('id', 'servicesParaThree');
+
+
+// Create text for the product page.
+let paragraphTextServices = document.createTextNode('Hi there! Welcome to my services page. I offer three services primarily ' +
+    'Web Development, Android Development, and Game Development. I am pretty good with these development services. However, I am mostly ' +
+    'comfortable with the backend development of these services. That said, I still have a team of front-end developers who can get your ' +
+    ' work done! My main languages are: JAVA, JAVASCRIPT, REACT, PYTHON, and .NET');
+
+let paragraphTextServicesImage = document.createTextNode('WEB DEVELOPMENT: I am pretty good with these development services and I can get' +
+    ' your website running live with out any problem. I offer fullstack development services and can create your website from scratch' +
+    'Plus you dont have to worry about purchasing domain-specific services, I have it covered for you.');
+
+let paragraphTextServicesImageTwo = document.createTextNode('ANRDOID DEVELOPMENT: I can develop the applications you wish to develop ' +
+    ' through Java. There are a lot of different options available for you to develop your applications and I have them covered for you.');
+
+let paragraphTextServicesImageThree = document.createTextNode('GAME DEVELOPMENT: Apart from that, I have a good connections with developers' +
+    ' that can create video games and a few of my contacts are working with Ubisoft, Nintendo, and Electronic Arts. Below is the link to my resume:');
+
+
+// Add the text to the product page.
+paragraphForServices.appendChild(paragraphTextServices);
+paragraphForServicesImage.appendChild(paragraphTextServicesImage);
+paragraphForServicesImageTwo.appendChild(paragraphTextServicesImageTwo);
+paragraphForServicesImageThree.appendChild(paragraphTextServicesImageThree);
+
+
+// Ensure that the paragraph is added to this specific page.
+if (location.href == "http://127.0.0.1:5500/services.html") {
+    servicesPage = document.body.appendChild(paragraphForServices);
+    servicesPage = document.body.appendChild(paragraphForServicesImage);
+    servicesPage = document.body.appendChild(paragraphForServicesImageTwo);
+    servicesPage = document.body.appendChild(paragraphForServicesImageThree);
+}
+
+// SERVICES PAGE END!
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+
+// CONTACT PAGE START!
+
+/**
+ * This is the fucntion to redirect the user to the index.html page or called home after three seconds
+ * while printing the data to the console.
+ * @param {} e 120,
+ */
+function timedRedirect(e) {
+    e.preventDefault();
+
+    e.stopPropagation();
+
+    let emailAddress = document.getElementById('ExampleAddresInput').value;
+
+    let contact = document.getElementById('ContactNumberInput').value;
+
+    let firstName = document.getElementById('FirstNameInput').value;
+
+    let lastName = document.getElementById('LastNameInput').value;
+
+    let shortMessage = document.getElementById('ShortMessageInput').value;
+
+    console.log("Name: " + firstName + " " + lastName + "\nEmailAddress: " + emailAddress + "\nContact: " + contact + "\nMessage:" + shortMessage);
+
+    setTimeout(function () {
+
+        window.location.href = "index.html";
+
+    }, 3000);
+
+}
+
+// CONTACT PAGE END!
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+
+// ABOUT PAGE START!
+
+
+// Using only JavaScript, added another link to the Navbar above named Human Resources, that sits between About Us and Contact Us.
+//let navBar = document.getElementsByTagName('ul')[0];
+//let aboutUs = document.querySelector("li")[3];
+// let navBar = document.querySelector("li");
+// let aboutUs = document.querySelector("nav ul li:nth-child(2)");
+
+// let humanResourcesLink = document.createElement("li");
+// let humanResources = document.createTextNode("Human Resources");
+
+// humanResourcesLink.appendChild(humanResources);
+
+// navBar.insertBefore(humanResourcesLink, aboutUs.nextSibling);
