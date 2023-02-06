@@ -215,3 +215,28 @@ function timedRedirect(e) {
 // humanResourcesLink.appendChild(humanResources);
 
 // navBar.insertBefore(humanResourcesLink, aboutUs.nextSibling);
+
+
+// Creating a variable for the about us page.
+let aboutUs;
+
+
+// Create an element for the about us page.
+let paragraphForAboutUs = document.createElement('p');
+
+// Set attributes.
+paragraphForAboutUs.setAttribute('id', 'paraOfAboutUs');
+
+let paragraphTextAboutUs = document.createTextNode('I am Nikunj Suryavanshi. I like playing video games and its one of my hobbies.' + 
+' However, I am mostly interested in Spirituality, and regarding the meaning of life. Apart from all this hard and fast life, I ' +
+'seek peace and contentment. I wish to visit all the spritual palces in the world. One Fun fact: I am an SEO Content Writer ' +
+' and I have written articles that used to rank in top 10 seraches of the goolge search engine.');
+
+
+paragraphForAboutUs.appendChild(paragraphTextAboutUs);
+
+// Ensure that the paragraph is added to this specific page.
+if (location.href == "http://127.0.0.1:5500/about.html") {
+    aboutUs = document.body.appendChild(paragraphForAboutUs);
+}
+

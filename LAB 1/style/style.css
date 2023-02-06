@@ -30,46 +30,41 @@ p {
 }
 
 #imageParaOne {
-    text-align: left;
     position: absolute;
-    bottom: 38%;
-    overflow-wrap: break-word;
+    bottom: 50%;
+    padding-left: 45%;
 }
 
 #imageParaTwo {
-    text-align: left;
     position: absolute;
     bottom: 0%;
-    overflow-wrap: break-word;
+    padding-left: 45%;
 }
 
 #imageParaThree {
-    text-align: left;
     position: absolute;
-    bottom: -45%;
-    overflow-wrap: break-word;
+    bottom: -50%;
+    padding-left: 45%;
 }
 
 #servicesParaOne {
-    text-align: left;
     position: absolute;
     bottom: 35%;
-    overflow-wrap: break-word;
+    padding-left: 45%;
 }
 
 #servicesParaTwo {
-    text-align: left;
     position: absolute;
     bottom: -15%;
-    overflow-wrap: break-word;
+    padding-left: 45%;
 }
 
 #servicesParaThree {
-    text-align: left;
     position: absolute;
     bottom: -68%;
-    overflow-wrap: break-word;
+    padding-left: 45%;
 }
+
 
 #tvShowThree {
     width: 500px;
