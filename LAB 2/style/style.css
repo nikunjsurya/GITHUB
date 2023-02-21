@@ -1,0 +1,101 @@
+body {
+    background-image: url(../images/background.jpg);
+    text-decoration-color: white;
+}
+
+.navbar-inner {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+
+}
+
+.navbar-footer {
+    background-image: url(../images/background.jpg);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+
+.products-container {
+    inline-size: min-content;
+}
+
+#imageParaOne {
+    position: absolute;
+    bottom: 50%;
+    padding-left: 45%;
+}
+
+#imageParaTwo {
+    position: absolute;
+    bottom: 0%;
+    padding-left: 45%;
+}
+
+#imageParaThree {
+    position: absolute;
+    bottom: -50%;
+    padding-left: 45%;
+}
+
+#servicesParaOne {
+    position: absolute;
+    bottom: 35%;
+    padding-left: 45%;
+}
+
+#servicesParaTwo {
+    position: absolute;
+    bottom: -15%;
+    padding-left: 45%;
+}
+
+#servicesParaThree {
+    position: absolute;
+    bottom: -68%;
+    padding-left: 45%;
+}
+
+
+#tvShowThree {
+    width: 500px;
+    padding-left: auto;
+    margin-top: 10px;
+}
+
+#tvShowOne {
+    width: 500px;
+    padding-left: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#tvShowTwo {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 55px;
+}
+
+#nick {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+
+}
+
+.services {
+    text-align: center;
+    display: block;
+}
