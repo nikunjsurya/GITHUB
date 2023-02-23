@@ -227,10 +227,10 @@ let paragraphForAboutUs = document.createElement('p');
 // Set attributes.
 paragraphForAboutUs.setAttribute('id', 'paraOfAboutUs');
 
-let paragraphTextAboutUs = document.createTextNode('I am Nikunj Suryavanshi. I like playing video games and its one of my hobbies.' + 
-' However, I am mostly interested in Spirituality, and regarding the meaning of life. Apart from all this hard and fast life, I ' +
-'seek peace and contentment. I wish to visit all the spritual palces in the world. One Fun fact: I am an SEO Content Writer ' +
-' and I have written articles that used to rank in top 10 seraches of the goolge search engine.');
+let paragraphTextAboutUs = document.createTextNode('I am Nikunj Suryavanshi. I like playing video games and its one of my hobbies.' +
+    ' However, I am mostly interested in Spirituality, and regarding the meaning of life. Apart from all this hard and fast life, I ' +
+    'seek peace and contentment. I wish to visit all the spritual palces in the world. One Fun fact: I am an SEO Content Writer ' +
+    ' and I have written articles that used to rank in top 10 seraches of the goolge search engine.');
 
 
 paragraphForAboutUs.appendChild(paragraphTextAboutUs);
@@ -240,3 +240,74 @@ if (location.href == "http://127.0.0.1:5500/about.html") {
     aboutUs = document.body.appendChild(paragraphForAboutUs);
 }
 
+import * as userClass from "./class.js"
+import * as formValidation from "./form.js"
+
+$(function () {
+    let errorDiv = `<div class="errorMessage"></div>`;
+
+    $(errorDiv).appendTo("#first-group");
+    $(errorDiv).appendTo("#last-group");
+    $(errorDiv).appendTo("#usernameError");
+    // $(errorDiv).appendTo("#emailAddressError");
+    $(errorDiv).appendTo("#pass1-group");
+    $(errorDiv).appendTo("#pass2-group");
+});
+
+// if the submit button is on the page
+if ($("#inputButton")) {
+    // TO DO: add a click function that calls a callack function
+    $("#inputButton").click(function (e) {
+        // prevent the default submit action (stay on the page)
+        e.preventDefault();
+        // create a new user
+        // you normally wouldn't do this unless you had validated, but we're going to do it to show how class memebers work in calling the validation
+        const unvalidated_user = new userClass.User(
+            // get the first name input
+            $("#inputFirstName").val(),
+            // get the last name input
+            $("#inputLastName").val(),
+            // get the username input
+            $("#inputUsername").val(),
+            // get the email input
+            $("#exampleInputEmail1").val(),
+            // get the password input
+            $("#exampleInputPassword1").val()
+        );
+
+
+        console.log(`User Details: ${unvalidated_user.displayUser()}`)
+
+        // validate first name
+        $("#first-group").children(".errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
+        // validate last name
+        $("#last-group").children(".errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
+
+        // validate  username
+        $("#username-group").children(".errorMessage").html(formValidation.validateUsername(unvalidated_user.username));
+
+        // validate confirm password
+        let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
+        $("#pass1-group").children(".errorMessage").html(error);
+        $("#pass2-group").children(".errorMessage").html(error);
+
+
+    });
+}
+
+
+if ($("#btnSubmit")) {
+
+    $("#btnSubmit").click(function (e) {
+        e.preventDefault();
+        console.log(($("#exampleInputEmail1").val()), ($("#exampleInputPassword1").val()));
+});
+}
+
+if ($("#inputReset")) {
+    $("#inputReset").click(function (e) {
+        e.preventDefault();
+        $(".errorMessage").html("<div></div>");
+
+    });
+}
