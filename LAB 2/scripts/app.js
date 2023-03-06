@@ -298,6 +298,14 @@ if ($("#inputButton")) {
 
         console.log(`User Details: ${unvalidated_user.displayUser()}`)
 
+        // setTimeout(function () {
+
+        //     $(this).closest('form').find("input[type=text], input[type=password], input[type=email], textarea").val("");
+    
+        // }, 3000);
+
+        //$(this).closest('form').find("input[type=text], input[type=password], input[type=email], textarea").val("");
+
 
     });
 }
@@ -308,22 +316,6 @@ if ($("#btnSubmit")) {
     $("#btnSubmit").click(function (e) {
         e.preventDefault();
         console.log(($("#exampleInputEmail1").val()), ($("#exampleInputPassword1").val()));
-
-});
-}
-
-if ($("#inputButton")) {
-
-    $("#inputButton").click(function (e) {
-        e.preventDefault();
-
-        // setTimeout(function () {
-
-        //     $(this).closest('form').find("input[type=text], input[type=password], input[type=email], textarea").val("");
-    
-        // }, 100);
-
-       // $(this).closest('form').find("input[type=text], input[type=password], input[type=email], textarea").val("");
 
 });
 }
