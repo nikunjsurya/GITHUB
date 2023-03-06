@@ -240,6 +240,9 @@ if (location.href == "http://127.0.0.1:5500/about.html") {
     aboutUs = document.body.appendChild(paragraphForAboutUs);
 }
 
+
+// Below part of the code is referenced from the ICE 4 code that professor provdied.
+
 import * as userClass from "./class.js"
 import * as formValidation from "./form.js"
 
@@ -248,15 +251,15 @@ $(function () {
 
     $(errorDiv).appendTo("#first-group");
     $(errorDiv).appendTo("#last-group");
-    $(errorDiv).appendTo("#usernameError");
-    // $(errorDiv).appendTo("#emailAddressError");
+    $(errorDiv).appendTo("#username-group");
+    $(errorDiv).appendTo("#email-group");
     $(errorDiv).appendTo("#pass1-group");
     $(errorDiv).appendTo("#pass2-group");
 });
 
 // if the submit button is on the page
 if ($("#inputButton")) {
-    // TO DO: add a click function that calls a callack function
+
     $("#inputButton").click(function (e) {
         // prevent the default submit action (stay on the page)
         e.preventDefault();
@@ -275,21 +278,25 @@ if ($("#inputButton")) {
             $("#exampleInputPassword1").val()
         );
 
-
-        console.log(`User Details: ${unvalidated_user.displayUser()}`)
-
         // validate first name
         $("#first-group").children(".errorMessage").html(formValidation.validateFirst(unvalidated_user.firstName));
+
         // validate last name
         $("#last-group").children(".errorMessage").html(formValidation.validateLast(unvalidated_user.lastName));
 
         // validate  username
         $("#username-group").children(".errorMessage").html(formValidation.validateUsername(unvalidated_user.username));
 
+        // validate email
+        $("#email-group").children(".errorMessage").html(formValidation.validateEmail(unvalidated_user.email));
+
         // validate confirm password
-        let error = formValidation.validatePassword(unvalidated_user.password, $("#inputPassword2").val());
+        let error = formValidation.validatePassword(unvalidated_user.password, $("#exampleInputPasswordConfirm").val());
         $("#pass1-group").children(".errorMessage").html(error);
         $("#pass2-group").children(".errorMessage").html(error);
+
+
+        console.log(`User Details: ${unvalidated_user.displayUser()}`)
 
 
     });
@@ -301,13 +308,34 @@ if ($("#btnSubmit")) {
     $("#btnSubmit").click(function (e) {
         e.preventDefault();
         console.log(($("#exampleInputEmail1").val()), ($("#exampleInputPassword1").val()));
+
 });
 }
 
+if ($("#inputButton")) {
+
+    $("#inputButton").click(function (e) {
+        e.preventDefault();
+
+        // setTimeout(function () {
+
+        //     $(this).closest('form').find("input[type=text], input[type=password], input[type=email], textarea").val("");
+    
+        // }, 100);
+
+       // $(this).closest('form').find("input[type=text], input[type=password], input[type=email], textarea").val("");
+
+});
+}
+
+// Below line of code adapts and utilizes code from Shane Blake @ https://stackoverflow.com/questions/6364289/clear-form-fields-with-jquery .
 if ($("#inputReset")) {
     $("#inputReset").click(function (e) {
         e.preventDefault();
         $(".errorMessage").html("<div></div>");
+
+        // This part is entirely from Shane Blake @ https://stackoverflow.com/questions/6364289/clear-form-fields-with-jquery .
+        $(this).closest('form').find("input[type=text], input[type=password], input[type=email], textarea").val("");
 
     });
 }

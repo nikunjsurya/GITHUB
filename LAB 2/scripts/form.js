@@ -1,4 +1,10 @@
 /**
+ * Author:      Nikunj Suryavanshi
+ * Date:        04/03/2023
+ * Student Id:  100801799
+ */
+
+/**
  * validateFirst - validated user first name entry through registration form
  * @param {string} first
  * @returns html element for error message
@@ -47,8 +53,8 @@ export function validateUsername(username) {
  * @returns html element for error message
  */
 export function validateEmail(email) {
-    if (email.length < 8) {
-        return "<p>You have entered a email that is too short.</p>"
+    if (email.length < 8 || !email.includes('@')) {
+        return "<p>Please enter an appropriate email address.</p>"
     }
     else {
         return "<p></p>";
@@ -62,10 +68,26 @@ export function validateEmail(email) {
  * @returns html element for error message
  */
 export function validatePassword(pass1, pass2) {
-    if (pass1 == pass2 && pass1 > 6) {
-        return "<p></p>";
-    } else {
-        return "<p>Your passwords do not match.</p>"
+    // if (pass1 == pass2 && pass1.length >= 6) {
+    //     return "<p></p>";
+    // }
+    // else {
+    //     return "<p>Your passwords do not match.</p>";
+    // }
+    
+    if (pass1 == pass2)
+    {
+        if(pass1.length >= 6)
+        {
+            return "<p></p>";
+        }
+        else{
+            return "<p>Minium length must be 6</p>";
+        }
+    }
+    else
+    {
+        return "<p>Your passwords do not match.</p>";
     }
 
 };

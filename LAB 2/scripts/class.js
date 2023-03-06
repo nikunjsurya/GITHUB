@@ -1,5 +1,9 @@
-/*
-* Class to create new user
+/**
+ * Author:      Nikunj Suryavanshi
+ * Date:        04/03/2023
+ * Student Id:  100801799
+ * 
+ * This is the user class referered from the code professor provided for ICE.
  */
 export class User {
 
